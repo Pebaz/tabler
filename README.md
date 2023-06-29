@@ -5,13 +5,15 @@
 ```python
 from tabler import tabler
 
-tabler([
-    ['Name', 'URL'],
-    ['Microsoft', 'https://www.microsoft.com'],
-    ['Google', 'https://www.google.com'],
-    ['Apple', 'https://www.apple.com'],
+tabler(
+    [
+        ['Name', 'URL'],
+        ['Microsoft', 'https://www.microsoft.com'],
+        ['Google', 'https://www.google.com'],
+        ['Apple', 'https://www.apple.com']
+    ],
     title='Companies'
-])
+)
 ```
 
 ![Screenshot](Screenshot.png)
