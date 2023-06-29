@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tabler"
+version = "0.1.0"
+description = "Convert a list of columns and rows into a GUI Table"
+authors = []
+license = "MIT"
+readme = "README.md"
+packages = [{include = "tabler"}]
+
+[tool.poetry.dependencies]
+python = "<3.12,>=3.7"
+pyside6 = "*"
+kubernetes = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
