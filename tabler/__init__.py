@@ -8,7 +8,8 @@ __all__ = ['tabler']
 
 def tabler(rows, title=None):
     assert len(rows) >= 1, 'No header row'
-    assert all(len(row) == len(rows[0]) for row in rows), "Cols don't line up"
+    header_row = len(str(rows[0]))
+    assert all(len(row) == header_row for row in rows), "Cols don't line up"
 
     app = QApplication.instance() or QApplication([])
 
@@ -37,7 +38,7 @@ def tabler(rows, title=None):
     for row in rows:
         for i, col in enumerate(row):
             column_widget = column_widgets[i]
-            column_widget.addWidget(QLabel(col))
+            column_widget.addWidget(QLabel(str(col)))
 
     main_content.setLayout(main_layout)
     scroll_area.setWindowTitle(title or "Tabler")
