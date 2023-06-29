@@ -10,7 +10,6 @@ packages = [{include = "tabler"}]
 [tool.poetry.dependencies]
 python = "<3.12,>=3.7"
 pyside6 = "*"
-kubernetes = "*"
 
 [build-system]
 requires = ["poetry-core"]
