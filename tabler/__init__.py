@@ -9,7 +9,7 @@ __all__ = ['tabler']
 def tabler(rows, title=None):
     assert len(rows) >= 1, 'No header row'
     header_row = len(str(rows[0]))
-    assert all(len(row) == header_row for row in rows), "Cols don't line up"
+    assert all(len(str(row)) == header_row for row in rows), "Cols don't line up"
 
     app = QApplication.instance() or QApplication([])
 
